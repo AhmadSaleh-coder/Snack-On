@@ -6,10 +6,6 @@ import CategoryCard from "./Components/Category/CategoryCard.tsx";
 
 const App = () => {
   const { sheetData, loading } = useSheetData();
-  // const uniqueCategories = Array.from(
-  //   new Set(sheetData.map((food) => food.Category))
-  // );
-
   const uniqueCategories = Array.from(
     new Set(sheetData.map((food) => food.Category))
   ).map((category) => ({
