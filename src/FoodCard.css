@@ -1,0 +1,35 @@
+/* FoodCard.css */
+.food-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.food-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.food-name {
+  margin: 0;
+  color: #333;
+}
+
+.food-price {
+  margin: 0;
+  color: #e44d26; /* Orange color for price */
+}
+
+.food-description {
+  color: #666;
+}
