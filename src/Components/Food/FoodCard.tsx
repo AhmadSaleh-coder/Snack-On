@@ -18,7 +18,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
   return (
     <div className="food-card">
       <div className="food-image">
-        <img style={{ width: "100%" }} src={Image} alt={`${foodName} Image`} />
+        <img style={{ width: "100%" }} src={Image} alt={foodName} />
       </div>
       <div className="food-header">
         <h3 className="food-name">{foodName}</h3>
