@@ -17,7 +17,7 @@
 }
 .Category-Card Button {
   position: absolute;
-  bottom: -10px; /* Adjust the value to set the distance from the bottom border */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   padding: 5px 10px;
