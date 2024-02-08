@@ -13,7 +13,7 @@ const App = () => {
           {" "}
           {/* Change from Switch to Routes */}
           <Route path="/" element={<Homepage />} />
-          <Route path="/Food" element={<FoodPage />} />
+          <Route path="/Food/:categoryName" element={<FoodPage />} />
           {/* Add more routes as needed */}
         </Routes>
       </div>

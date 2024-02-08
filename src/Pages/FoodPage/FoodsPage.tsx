@@ -1,9 +1,9 @@
 import React from "react";
 import useSheetData from "../../useSheetData.tsx";
 import FoodCard from "../../Components/Food/FoodCard.tsx";
+import { useParams } from "react-router-dom";
 
 interface FoodItem {
-  id: number; // Adjust the type of id based on your data
   Name: string;
   Price: number;
   Category: string;
@@ -11,18 +11,23 @@ interface FoodItem {
 }
 
 const FoodPage = () => {
+  const { categoryName } = useParams();
+  console.log("categoryName", categoryName);
   const { sheetData, loading } = useSheetData();
+  const filteredData = sheetData.filter(
+    (foodItem: FoodItem) => foodItem.Category === categoryName
+  );
 
-  console.log("sheetData", sheetData);
+  console.log("filteredData", filteredData);
   return (
     <div>
       <h1>Helllllooooo</h1>
       {loading && <p>Loading...</p>}
       {!loading && sheetData && (
         <div>
-          {sheetData.map((foodItem: FoodItem) => (
+          {filteredData.map((foodItem: FoodItem, index) => (
             <FoodCard
-              key={foodItem.id} // Make sure to use a unique key for each item
+              key={index} // Make sure to use a unique key for each item
               foodName={foodItem.Name}
               price={foodItem.Price}
               category={foodItem.Category}
