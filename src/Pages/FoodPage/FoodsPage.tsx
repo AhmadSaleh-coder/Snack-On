@@ -7,6 +7,7 @@ interface FoodItem {
   Name: string;
   Price: number;
   Category: string;
+  Image: string;
   // Add other properties as needed
 }
 
@@ -31,6 +32,7 @@ const FoodPage = () => {
               foodName={foodItem.Name}
               price={foodItem.Price}
               category={foodItem.Category}
+              Image={foodItem.Image}
             />
           ))}
         </div>
